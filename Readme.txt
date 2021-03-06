@@ -1,5 +1,5 @@
 To run the efficiently follow the step to run programe at one complilation
-1-Download the zip file and extract in desktop.
+1-Download the web_scrap_project.zip file and extract in desktop.
 2-Take .py or .ipynb file and open in python terminal.
 3-In terminal it will ask for chromedriver path that is present in the folder where you extracted  zip file.
 4-Then it ask for ASIN cade file so enter the asin code file path from the extracted folder.
