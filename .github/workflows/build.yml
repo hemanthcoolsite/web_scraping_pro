@@ -1,0 +1,22 @@
+name: Commit Validation
+
+on:
+  push:
+
+jobs:
+  commit-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check Commit Message
+        run: |
+          COMMIT_MSG=$(git log -1 --pretty=%B)
+
+          echo "$COMMIT_MSG"
+
+          if [[ ! "$COMMIT_MSG" =~ [A-Z]+-[0-9]+ ]]; then
+            echo "JIRA ticket missing"
+            exit 1
+          fi
